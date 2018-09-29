@@ -6,7 +6,7 @@
     <ProjectGuid>193538b8-2083-44fb-8998-f6521114d3ae</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <ProjectTypeGuids>{789894c7-04a9-4a11-a6b5-3f4435165112};{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
-    <StartupFile>app.py</StartupFile>
+    <StartupFile>runserver.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -27,9 +27,39 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="app.py" />
+    <Compile Include="runserver.py" />
+    <Compile Include="PythonFlaskDatabase\models\factory.py" />
+    <Compile Include="PythonFlaskDatabase\models\mongodb.py" />
+    <Compile Include="PythonFlaskDatabase\models\__init__.py" />
+    <Compile Include="PythonFlaskDatabase\settings.py" />
+    <Compile Include="PythonFlaskDatabase\views.py" />
+    <Compile Include="PythonFlaskDatabase\__init__.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="PythonFlaskDatabase\static\content\bootstrap.css" />
+    <Content Include="PythonFlaskDatabase\static\content\bootstrap.min.css" />
+    <Content Include="PythonFlaskDatabase\static\content\site.css" />
+    <Content Include="PythonFlaskDatabase\static\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="PythonFlaskDatabase\static\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="PythonFlaskDatabase\static\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="PythonFlaskDatabase\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="PythonFlaskDatabase\static\scripts\bootstrap.js" />
+    <Content Include="PythonFlaskDatabase\static\scripts\bootstrap.min.js" />
+    <None Include="PythonFlaskDatabase\static\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="PythonFlaskDatabase\static\scripts\jquery-1.10.2.js" />
+    <Content Include="PythonFlaskDatabase\static\scripts\jquery-1.10.2.min.js" />
+    <Content Include="PythonFlaskDatabase\static\scripts\jquery-1.10.2.min.map" />
+    <None Include="PythonFlaskDatabase\static\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="PythonFlaskDatabase\static\scripts\jquery.validate.js" />
+    <Content Include="PythonFlaskDatabase\static\scripts\jquery.validate.min.js" />
+    <Content Include="PythonFlaskDatabase\static\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="PythonFlaskDatabase\static\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="PythonFlaskDatabase\static\scripts\modernizr-2.6.2.js" />
+    <Content Include="PythonFlaskDatabase\static\scripts\respond.js" />
+    <Content Include="PythonFlaskDatabase\static\scripts\respond.min.js" />
+    <None Include="PythonFlaskDatabase\static\scripts\_references.js" />
+    <Content Include="PythonFlaskDatabase\templates\layout.html" />
+    <Content Include="PythonFlaskDatabase\templates\results.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +72,15 @@
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
       <Architecture>X64</Architecture>
     </Interpreter>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PythonFlaskDatabase\" />
+    <Folder Include="PythonFlaskDatabase\models\" />
+    <Folder Include="PythonFlaskDatabase\static\" />
+    <Folder Include="PythonFlaskDatabase\static\content\" />
+    <Folder Include="PythonFlaskDatabase\static\fonts\" />
+    <Folder Include="PythonFlaskDatabase\static\scripts\" />
+    <Folder Include="PythonFlaskDatabase\templates\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 
