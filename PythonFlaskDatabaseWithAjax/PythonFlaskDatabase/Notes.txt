@@ -1,0 +1,24 @@
+{% for record in records %}
+	<div class="row">
+		<div class="col-sm-2">
+			{{record.first_name}} {{record.last_name}}
+		</div>
+		<div class="col-sm-1">
+			{{record.get("gender") or "" }}
+		</div>
+		<div class="col-sm-1">
+			{{'%0.0f'| format(record.get("age") or 0 |round|int) if record.get("age")!= None else "" }}
+		</div>
+		<div class="col-sm-3">
+			{{record.get("address")["street"] or "" }}{{ ", " if record.get("address")["street"]}}{{record.get("address")["city"] or "" }}{{ ", " if record.get("address")["state"]}}{{record.get("address")["state"] or "" }}
+		</div>
+		<div class="col-sm-1">
+			{{'$%2.2f'| format(record.get("balance") or 0) if record.get("balance")!= None else "" }}
+		</div>
+		<div class="col-sm-2">
+			{% for membership in record.get("memberships") or "" %}
+			{{ membership}}|
+			{% endfor %}
+		</div>
+	</div>
+{% endfor %}

@@ -36,6 +36,7 @@
     <Compile Include="PythonFlaskDatabase\__init__.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="PythonFlaskDatabase\Notes.txt" />
     <Content Include="PythonFlaskDatabase\static\content\bootstrap.css" />
     <Content Include="PythonFlaskDatabase\static\content\bootstrap.min.css" />
     <Content Include="PythonFlaskDatabase\static\content\site.css" />

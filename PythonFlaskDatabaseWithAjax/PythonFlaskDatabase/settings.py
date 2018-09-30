@@ -31,7 +31,7 @@ if REPOSITORY_NAME == 'mongodb':
     REPOSITORY_SETTINGS = {
         'MONGODB_HOST': environ.get('MONGODB_HOST', "mongodb://127.0.0.1:27017"),
         'MONGODB_DATABASE': environ.get('MONGODB_DATABASE', 'test'),
-        'MONGODB_COLLECTION': environ.get('MONGODB_COLLECTION', 'collections'),
+        'MONGODB_COLLECTION': environ.get('MONGODB_COLLECTION', 'customers'),
     }
 else:
     raise ValueError('Unknown repository.')
