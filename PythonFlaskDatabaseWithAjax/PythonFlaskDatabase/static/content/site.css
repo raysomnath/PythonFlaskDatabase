@@ -43,11 +43,61 @@ input[type="checkbox"].input-validation-error {
 
 .radio,
 .checkbox {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .tableHeader {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size:1em;
-    font-weight:bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/*input::-webkit-input-placeholder {
+    color: red !important;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+/*color: red !important;
+}*/
+
+/*input::-moz-placeholder {*/ /* Firefox 19+ */
+/*color: red !important;
+}*/
+
+/*input:-ms-input-placeholder {
+    color: red !important;
+}*/
+.hasError::-webkit-input-placeholder {
+    color: red;
+}
+
+.error {
+    font: normal 10px arial;
+    padding: 3px;
+    margin: 3px;
+    background-color: #ffc;
+    border: 1px solid #c00;
+}
+
+.clickableTRow {
+    cursor: pointer;
+    padding: 5px;
+    margin-right: 170px;
+    border: 1px solid #ccc !important;
+    border-radius: 5px;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+    background-color: #f4f0f7;
+}
+
+.table-striped > tbody {
+    font-family: 'Open Sans',Sans-Serif,Arial;
+    font-size: 0.5em;
+    line-height: 1.4;
+    color: #6a737c;
+}
+
+table:hover tbody tr:hover td, .table-hover tbody tr:hover th {
+    background: AliceBlue !important;
 }

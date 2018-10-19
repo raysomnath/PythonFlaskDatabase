@@ -12,20 +12,41 @@ import json
 
 repository = create_repository(REPOSITORY_NAME, REPOSITORY_SETTINGS)
 
-
-title = "TODO sample application with Flask and MongoDB"
-heading = "TODO Reminder with Flask and MongoDB"
-
-
-
-
 @app.route('/')
 @app.route('/home')
 def home():
-    """Renders a sample page."""
     
-    return render_template(
-        "results.html",
+    """Renders all customers from database."""
+    return render_template("results.html",
+        year=datetime.now().year,
         title="Customer data",
-        records = repository.get_customers(),
-        )
+        records = repository.get_customers(),)
+
+@app.route('/addCustomer',methods=['GET', 'POST'])
+def addCustomer():
+    """Renders a add customer page."""
+    if request.method == 'GET':
+        return render_template("addCustomer.html",
+        title="Add Customer",
+        year=datetime.now().year,
+        records = repository.get_customers())
+    elif request.method == 'POST':
+        data = request.get_json()
+        result = repository.add_customer(data)
+        return (json.dumps({"result":str(result)}))
+
+@app.route('/deleteCustomer',methods=['POST'])
+def deleteCustomer():
+    """deletes customer."""
+    if request.method == 'POST':
+        data = request.get_json()
+        result = repository.delete_customer(data)
+        return (json.dumps({ "result": result }))
+
+@app.route('/editCustomer',methods=['POST'])
+def editCustomer():
+    """Edit a customer and returns the results of the operation."""
+    if request.method == 'POST':
+        data = request.get_json()
+        result = repository.edit_customer(data)
+        return (json.dumps({ "result" : result }))

@@ -22,3 +22,33 @@
 		</div>
 	</div>
 {% endfor %}
+
+<!--<div class="clickableDiv row" id={{ ###record.customerId### }}>
+    <div class="col-sm-2">
+        ###{{ ###record.firstname### }} {{ record.lastname }}
+    </div>
+    <div class="col-sm-1">
+        {{ record.gender }}
+    </div>
+    <div class="col-sm-1">
+        {% if record.age != None %}{{ record.age }}{% endif %}
+    </div>
+    <div class="col-sm-3">
+        {{ record.street }}{% if record.city != "" %},{% endif %} {{ record.city }}{% if record.state != "" %},{% endif %} {{ record.state }}
+    </div>
+    <div class="col-sm-1">
+        {% if record.balance != None %}{{ record.balance }}{% endif %}
+    </div>
+    <div class="col-sm-2">
+        {{ record.memberships }}
+    </div>
+</div>-->
+
+<!--<div class="row tableHeader">
+    <div class="col-sm-2">Name</div>
+    <div class="col-sm-1">Gender</div>
+    <div class="col-sm-1">Age</div>
+    <div class="col-sm-3">Address</div>
+    <div class="col-sm-1">Balance</div>
+    <div class="col-sm-2">Memberships</div>
+</div>-->

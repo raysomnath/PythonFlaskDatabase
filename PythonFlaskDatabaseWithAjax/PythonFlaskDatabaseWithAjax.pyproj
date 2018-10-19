@@ -55,10 +55,12 @@
     <Content Include="PythonFlaskDatabase\static\scripts\jquery.validate.min.js" />
     <Content Include="PythonFlaskDatabase\static\scripts\jquery.validate.unobtrusive.js" />
     <Content Include="PythonFlaskDatabase\static\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="PythonFlaskDatabase\static\scripts\js\form.js" />
     <Content Include="PythonFlaskDatabase\static\scripts\modernizr-2.6.2.js" />
     <Content Include="PythonFlaskDatabase\static\scripts\respond.js" />
     <Content Include="PythonFlaskDatabase\static\scripts\respond.min.js" />
     <None Include="PythonFlaskDatabase\static\scripts\_references.js" />
+    <Content Include="PythonFlaskDatabase\templates\addCustomer.html" />
     <Content Include="PythonFlaskDatabase\templates\layout.html" />
     <Content Include="PythonFlaskDatabase\templates\results.html" />
     <Content Include="requirements.txt" />
@@ -81,6 +83,7 @@
     <Folder Include="PythonFlaskDatabase\static\content\" />
     <Folder Include="PythonFlaskDatabase\static\fonts\" />
     <Folder Include="PythonFlaskDatabase\static\scripts\" />
+    <Folder Include="PythonFlaskDatabase\static\scripts\js\" />
     <Folder Include="PythonFlaskDatabase\templates\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />

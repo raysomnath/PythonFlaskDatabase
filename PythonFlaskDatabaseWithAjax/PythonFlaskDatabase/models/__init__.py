@@ -22,10 +22,16 @@ class Customer(object):
             self.gender = dict["gender"]
         else:
              self.gender = ""
-        if 'age' in dict:
+
+        #if 'age' in dict:
+        #    self.age = int(dict["age"])
+        #else:
+        #    self.age = None
+
+        if dict.get("age") != None:
             self.age = int(dict["age"])
         else:
-            self.age = None
+            self.age = 0
 
         if 'address' in dict:
             if 'street' in dict['address']:
@@ -45,22 +51,24 @@ class Customer(object):
             self.city = ""
             self.state = ""
 
-        if 'balance' in dict:
-            self.balance = '${:.2f}'.format(dict["balance"])
+        #if 'balance' in dict:
+        if dict.get("balance") != None:
+            self.balance = '{0:.2f}'.format(float(dict["balance"]))
         else:
-            self.balance = None
+            self.balance = 0.00
 
         if 'memberships' in dict:
             self.memberships = ""
-            if(len(dict["memberships"]) > 1):
+            if dict.get("memberships") != None:
                 for i, mem in enumerate(dict["memberships"]):
                     if i:
                        self.memberships += ", " + mem
                     else:
                         self.memberships += mem
             else:
-                self.memberships = dict["memberships"][0]
+                self.memberships = ""
         else:
             self.memberships = ""
+
 
    
